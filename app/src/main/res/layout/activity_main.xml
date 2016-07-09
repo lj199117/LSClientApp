@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eee"
+    tools:context=".MainActivity" >
+
+    <RadioGroup
+        android:id="@+id/bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/radio0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_tab_artists"
+            android:gravity="center"
+            android:text="团购"
+            android:textColor="@drawable/ic_tab_textcolor" />
+
+        <RadioButton
+            android:id="@+id/radio1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_tab_albums"
+            android:gravity="center"
+            android:text="附近"
+            android:textColor="@drawable/ic_tab_textcolor" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:drawableTop="@drawable/ic_tab_songs"
+            android:gravity="center"
+            android:text="我的"
+            android:textColor="@drawable/ic_tab_textcolor" />
+        <!--最后这个设置android:checked="true" 是我在代码里onRestart会重新设置默认选择的按钮
+        而这个操作会导致RadioGroup的OncheckChanged事件
+        -->
+        <RadioButton
+            android:id="@+id/radio3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:button="@null"
+            android:checked="true"
+            android:drawableTop="@drawable/ic_tab_playlists"
+            android:gravity="center"
+            android:text="更多"
+            android:textColor="@drawable/ic_tab_textcolor" />
+    </RadioGroup>
+
+    <FrameLayout
+        android:id="@+id/layout_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_bar" >
+    </FrameLayout>
+
+</RelativeLayout>
